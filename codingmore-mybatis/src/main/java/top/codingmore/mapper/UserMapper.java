@@ -5,6 +5,9 @@ import top.codingmore.entity.User;
 
 import java.util.List;
 
+/**
+ * 用户mapper
+ */
 public interface UserMapper {
     @Select("SELECT * FROM user")
     List<User> getAll();
