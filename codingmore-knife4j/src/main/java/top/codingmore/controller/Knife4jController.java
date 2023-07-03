@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Knife4j测试类
+ */
 @Api(tags = "测试 Knife4j")
 @RestController
 @RequestMapping("/knife4j")
