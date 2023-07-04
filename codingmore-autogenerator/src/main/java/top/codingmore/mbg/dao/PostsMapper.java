@@ -2,6 +2,9 @@ package top.codingmore.mbg.dao;
 
 import top.codingmore.mbg.po.Posts;
 
+/**
+ * 帖子 Mapper
+ */
 public interface PostsMapper {
     int deleteByPrimaryKey(Long postsId);
 

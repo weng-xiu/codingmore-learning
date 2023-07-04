@@ -2,6 +2,9 @@ package top.codingmore.mbg.po;
 
 import java.util.Date;
 
+/**
+ * 帖子
+ */
 public class Posts {
     private Long postsId;
 

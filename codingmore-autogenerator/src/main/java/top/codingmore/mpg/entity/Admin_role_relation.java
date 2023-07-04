@@ -2,9 +2,11 @@ package top.codingmore.mpg.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+
+import java.io.Serializable;
 
 /**
  * <p>

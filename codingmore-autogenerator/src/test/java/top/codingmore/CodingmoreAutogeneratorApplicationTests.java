@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CodingmoreAutogeneratorApplicationTests {
 
+    //
     @Test
     void contextLoads() {
         System.out.println(System.getProperty("user.dir"));

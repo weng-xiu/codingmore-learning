@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 
 /**
+ * 代码生成器
  * 微信搜索「沉默王二」，回复 Java
  *
  * @author 沉默王二
