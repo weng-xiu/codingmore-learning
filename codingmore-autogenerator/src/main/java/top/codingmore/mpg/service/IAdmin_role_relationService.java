@@ -1,5 +1,6 @@
 package top.codingmore.mpg.service;
 
+import org.springframework.stereotype.Service;
 import top.codingmore.mpg.entity.Admin_role_relation;
 import com.baomidou.mybatisplus.extension.service.IService;
 
