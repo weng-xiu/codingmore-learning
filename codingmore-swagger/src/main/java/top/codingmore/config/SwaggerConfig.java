@@ -21,9 +21,17 @@ import java.lang.reflect.Field;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Configuration
-@EnableOpenApi
+/**
+ * Swagger配置类
+ */
+@Configuration  // 配置类
+@EnableOpenApi  // 开启swagger
 public class SwaggerConfig {
+
+    /**
+     * 配置swagger的docket的bean实例
+     * @return
+     */
     @Bean
     public Docket docket() {
         Docket docket = new Docket(DocumentationType.OAS_30)
@@ -37,6 +45,10 @@ public class SwaggerConfig {
         return docket;
     }
 
+    /**
+     * 配置swagger信息
+     * @return
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("编程猫实战项目笔记")
@@ -46,10 +58,19 @@ public class SwaggerConfig {
                 .build();
     }
 
+    /**
+     * 解决springfox和springmvc的冲突问题
+     * @return
+     */
     @Bean
     public static BeanPostProcessor springfoxHandlerProviderBeanPostProcessor() {
+
+        /**
+         * 通过BeanPostProcessor来修改springfox的handlerMappings
+         */
         return new BeanPostProcessor() {
 
+            // 在bean初始化之前执行
             @Override
             public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
                 if (bean instanceof WebMvcRequestHandlerProvider || bean instanceof WebFluxRequestHandlerProvider) {
@@ -58,6 +79,7 @@ public class SwaggerConfig {
                 return bean;
             }
 
+            // 在bean初始化之后执行
             private <T extends RequestMappingInfoHandlerMapping> void customizeSpringfoxHandlerMappings(List<T> mappings) {
                 List<T> copy = mappings.stream()
                         .filter(mapping -> mapping.getPatternParser() == null)
@@ -66,6 +88,7 @@ public class SwaggerConfig {
                 mappings.addAll(copy);
             }
 
+            // 通过反射获取handlerMappings
             @SuppressWarnings("unchecked")
             private List<RequestMappingInfoHandlerMapping> getHandlerMappings(Object bean) {
                 try {

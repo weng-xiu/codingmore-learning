@@ -1,4 +1,4 @@
-spring:
-  mvc:
-    path match:
-      matching-strategy: ANT_PATH_MATCHER
+spring: # Spring Boot 配置
+  mvc: # Spring MVC 配置
+    path match: # 路径匹配配置
+      matching-strategy: ANT_PATH_MATCHER # 路径匹配策略

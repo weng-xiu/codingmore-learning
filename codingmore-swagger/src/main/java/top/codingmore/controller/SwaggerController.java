@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Swagger测试类
+ */
 @Api(tags = "测试 Swagger")
 @RestController
 @RequestMapping("/swagger")
