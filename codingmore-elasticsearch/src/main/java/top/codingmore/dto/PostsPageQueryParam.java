@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * 文章分页对象
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="文章分页对象", description="文章")

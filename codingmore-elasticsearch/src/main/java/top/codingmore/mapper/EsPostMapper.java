@@ -6,6 +6,10 @@ import top.codingmore.model.EsPosts;
 
 import java.util.List;
 
+/**
+ * 文章
+ * @date 2020/11/2 22:00
+ */
 public interface EsPostMapper extends BaseMapper<EsPosts> {
     @Select("SELECT * FROM posts")
     List<EsPosts> getAll();

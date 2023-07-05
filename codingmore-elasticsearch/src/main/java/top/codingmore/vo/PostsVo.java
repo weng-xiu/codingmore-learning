@@ -13,6 +13,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 文章
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "PostsVo", description = "文章Vo")

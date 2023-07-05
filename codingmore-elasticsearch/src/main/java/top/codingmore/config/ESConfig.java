@@ -10,6 +10,9 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
+/**
+ * ES配置类
+ */
 @Configuration
 @EnableElasticsearchRepositories
 public class ESConfig {
