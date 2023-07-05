@@ -9,9 +9,16 @@ import javax.annotation.Resource;
 
 @SpringBootTest
 class CodingmoreRedisApplicationTests {
+
+    /**
+     * RedisTemplate是一个泛型类，可以进行任意类型的数据存储
+     */
     @Resource
     private RedisTemplate redisTemplate;
 
+    /**
+     * StringRedisTemplate是RedisTemplate的子类，只能进行字符串类型的数据存储
+     */
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
