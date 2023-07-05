@@ -8,6 +8,6 @@ public class CodingmoreMysqlApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CodingmoreMysqlApplication.class, args);
+        System.out.println("http://localhost:8080/");
     }
-
 }

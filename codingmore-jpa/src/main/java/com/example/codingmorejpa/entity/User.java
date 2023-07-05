@@ -9,6 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 用户表
+ */
 @Entity
 @Table(name = "user")
 @ToString
