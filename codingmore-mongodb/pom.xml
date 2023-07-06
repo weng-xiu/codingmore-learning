@@ -2,61 +2,84 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 父级依赖 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+	<!-- 项目信息 -->
 	<groupId>top.codingmore</groupId>
 	<artifactId>codingmore-mongodb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>codingmore-mongodb</name>
 	<description>Spring Boot 整合 MongoDB 实现文章浏览记录</description>
+
+	<!-- 项目属性 -->
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<!-- 项目依赖 -->
 	<dependencies>
+
+		<!-- spring-boot-starter-validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+
+		<!-- spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- mybatis-spring-boot-starter -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.2.2</version>
 		</dependency>
 
+		<!-- spring-boot-devtools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
+		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- spring-boot-starter-test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
+		<!-- mybatis-plus-boot-starter -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>3.4.2</version>
 		</dependency>
 
+		<!-- knife4j -->
 		<dependency>
 			<groupId>com.github.xiaoymin</groupId>
 			<artifactId>knife4j-spring-boot-starter</artifactId>
@@ -64,29 +87,39 @@
 			<version>3.0.2</version>
 		</dependency>
 
+		<!-- spring-boot-starter-aop -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
+		<!-- hutool-all -->
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
 			<version>5.7.20</version>
 		</dependency>
 
+		<!-- spring-boot-starter-data-mongodb -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 	</dependencies>
 
+	<!-- 项目构建 -->
 	<build>
+
+		<!-- 项目构建插件 -->
 		<plugins>
+
+			<!-- spring-boot-maven-plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+
+					<!-- 排除 lombok -->
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
